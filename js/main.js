@@ -7,26 +7,64 @@
 
 // richiesta all'utente di inserire una parola
 
-let userWord = prompt("inserisci una parola");
 
 
+console.log(isPalindromo(prompt("inserisci una parola")));
 
 // if( userWord.length % 2 )
 
 //      risultato = "pari";
         
 
+function isPalindromo(userWord){
 
         for (let i = 0, index = userWord.length; i < (userWord.length / 2); i++, index--){
 
             let letterOne = userWord.charAt(i);
 
-            let letterTwo = userWord.charAt(userWord.length-index);
+            let letterTwo = userWord.charAt(index - 1);
 
             console.log(letterOne);
 
             console.log(letterTwo);
+
+            if ( letterOne !== letterTwo ){
+
+                return false; 
+
+            }
+
         };
+
+        return true;
+
+}
+
+
+function isPalindromo2(userWord){
+
+    for (let i = 0, index = userWord.length; i < (userWord.length / 2); i++, index--){
+
+        let letterOne = userWord.charAt(i);
+
+        let letterTwo = userWord.charAt(index - 1);
+
+        console.log(letterOne);
+
+        console.log(letterTwo);
+
+        if ( letterOne !== letterTwo ){
+
+            return false; 
+
+        }
+
+    };
+
+    return true;
+
+}
+
 
         // prendo il secondo 50% di caratteri e li metto dentro ad un'altra lista
 
