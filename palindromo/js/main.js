@@ -7,9 +7,10 @@
 
 // richiesta all'utente di inserire una parola
 
+let inputUserWord = prompt("inserisci una parola");
 
 
-console.log(isPalindromo(prompt("inserisci una parola")));
+// console.log(isPalindromo2(prompt("inserisci una parola")));
 
 // if( userWord.length % 2 )
 
@@ -40,30 +41,23 @@ function isPalindromo(userWord){
 
 }
 
+ if (isPalindromo(inputUserWord) == true){
+        console.log("la parola è palindroma");
+ }
+ else{
+         
+         console.log("la parola non è palindroma");
+ }
 
-function isPalindromo2(userWord){
 
-    for (let i = 0, index = userWord.length; i < (userWord.length / 2); i++, index--){
+// function isPalindromo2(userWord){
 
-        let letterOne = userWord.charAt(i);
+//     return userWord.split().reverse();
+    
+//     };
 
-        let letterTwo = userWord.charAt(index - 1);
+    
 
-        console.log(letterOne);
-
-        console.log(letterTwo);
-
-        if ( letterOne !== letterTwo ){
-
-            return false; 
-
-        }
-
-    };
-
-    return true;
-
-}
 
 
         // prendo il secondo 50% di caratteri e li metto dentro ad un'altra lista
